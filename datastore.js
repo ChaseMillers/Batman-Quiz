@@ -1,119 +1,112 @@
-let questionNumber = 0;
-let score = 0;
-
-// MAKE THE QUESTION
-function generateQuestion () {
-  if (questionNumber < STORE.length) {
-    $('.questionAnswerForm').html (`<div class="question">
-    <h2>${STORE[questionNumber].question}</h2>
-    <form>
-    <fieldset>
-    <label class="answerOption">
-    <input type="radio" value="${STORE[questionNumber].answers[0]}" name="answer" required>
-    <span>${STORE[questionNumber].answers[0]}</span>
-    </label>
-    <label class="answerOption">
-    <input type="radio" value="${STORE[questionNumber].answers[1]}" name="answer" required>
-    <span>${STORE[questionNumber].answers[1]}</span>
-    </label>
-    <label class="answerOption">
-    <input type="radio" value="${STORE[questionNumber].answers[2]}" name="answer" required>
-    <span>${STORE[questionNumber].answers[2]}</span>
-    </label>
-    <button type="submit" class="submitButton">Submit</button>
-    </fieldset>
-    </form>
-    </div>`);
-} else {
-    renderResults();
-    restartQuiz();
-    $('.questionNumber').text(10)
-  }
-}
-
-//increment score
-function changeScore () {
-  // tells score to add 1
-  score ++;
-  // updates actuall text 
-  $('.score').text(score);
-}
-
-//Quiz starts// removes .quizStart// turns on .questionAnswerForm and footer// starts off at question number 1
-function startQuiz () {
-  $('.quizStart').on('click', '.startButton', (event) =>{
-    $('.quizStart').remove();
-    $('.questionAnswerForm').css('display', 'block');
-    $('footer ul').css('display', 'block');
-    $('.questionNumber').text(1);
-});
-}
-
-//user selects answer on submit run user feedback
-function userSelectAnswer () {
-  $('form').on('submit', (event) => {
-    event.preventDefault();
-    let selected = $('input:checked');
-    let answer = selected.val();
-    let correctAnswer = `${STORE[questionNumber].correctAnswer}`;
-    if (answer === correctAnswer) {
-      userAnswerFeedbackCorrect();
-      changeScore();
-    } else {
-      userAnswerFeedbackWrong();
+const STORE = [
+    {
+      question: 'The first person EVER to kiss Batman was??',
+      answers: [
+        'The joker – Batman Returns (1992)',
+        'Poison Ivy – Batman & Robin (1997)',
+        'Cat Women – Batman Returns (1992)'
+        ],
+      correctAnswer: 'Cat Women – Batman Returns (1992)',
+      icon: 'https://media.giphy.com/media/ax1F4T3W04rba/giphy.gif',
+      alt: 'Cat Women gives Batman a kiss'
+    },
+    {
+      question: 'How did Batman get so rich??',
+      answers: [
+        'He received a small loan of 1 million dollars ',
+        'He inherited the wealth from his family',
+        'He robs bad guy’s wallets before throwing them in prison'
+        ],
+        correctAnswer: 'He inherited the wealth from his family',
+        icon: 'https://media.giphy.com/media/IjaPn2AFONFg4/giphy.gif',
+        alt: 'Batman pulls out credit card'
+    },
+    {
+      question: 'This Batman movie so greatly offended parents, that McDonald’s decided to shut down its Batman Happy Meal toys',
+      answers: [
+        'Batman Returns (1992)',
+        'Batman Vs McDonads (1995)',
+        'The Lego Batman Movie (2017)'
+        ],
+        correctAnswer: 'Batman Returns (1992)',
+        icon: 'https://media.giphy.com/media/14kwRD61ir8wW4/giphy.gif',
+        alt: 'Mr McDonald rocking out'
+    },
+    {
+      question: 'Nipples became a new feature to the Batman suit in which movie??',
+      answers: [
+        'Batman: Forever (1995)',
+        'Batman: Dark Knight (2008)',
+        'Batman Vs Spider Man (2016)'
+        ],
+      correctAnswer: 'Batman: Forever (1995)',
+      icon: 'https://video-images.vice.com/_uncategorized/1497278763548-Batman_and_Robin_-_George_Clooney-1.jpeg?resize=320:*',
+      alt: 'Batman Nipple Suit'
+    },
+    {
+      question: 'This actor received numerous accolades for his performance as “The Joker” in Batman: Dark Knight. He overdosed just months before the release of the film??',
+      answers: [
+        'Christian Bale',
+        'Heath Ledger',
+        'Paul McCartney'
+        ],
+      correctAnswer: 'Heath Ledger',
+      icon: 'https://media.giphy.com/media/ZQSvc4VYkOr8Q/giphy.gif',
+      alt: 'The Joker saying you complete me'
+    },
+    {
+      question: 'The Batman suit featured the ability to freely turn the head without having to include the torso in which movie???',
+      answers: [
+        'Batman: The Dark Knight (2008)',
+        'Batman: Brakes his neck (1995)',
+        'Batman: Forever (1995)'
+        ],
+      correctAnswer: 'Batman: The Dark Knight (2008)',
+      icon: 'https://media.giphy.com/media/l41lUGT1Jpeta3qUw/giphy.gif',
+      alt: 'Batman turning his torso'
+    },
+    {
+      question: 'Who played as "Mr. Freeze" in the Batman & Robin movie',
+      answers: [
+      'Arnold Schwarzenegger',
+      'George Clooney',
+      'Kanye West'
+      ],
+      correctAnswer: 'Arnold Schwarzenegger',
+      icon: 'https://media.giphy.com/media/fhojy9soO6i5i/giphy.gif',
+      alt: 'stream icon'
+    },
+    {
+      question: 'The least commercially successful and among the worst rated superhero films of all time is???',
+      answers: [
+        'Batman & Robin (1997)',
+        'Batman Runs Away (2010)',
+        'Batman Returns (2011)'
+        ],
+        correctAnswer: 'Batman & Robin (1997)',
+        icon: 'https://images-na.ssl-images-amazon.com/images/I/91PSaaS99tL._SX342_.jpg',
+        alt: 'The Joker flashing his money'
+    },
+    {
+      question: 'The first person EVER to star as Batman in a movie was??',
+      answers: [
+        'Will Smith – Bat in Black (1982)',
+        'Michael Keaton – Batman (1943)',
+        'Ozzy Osbourne - Bat Sabeth (1992)'
+        ],
+      correctAnswer: 'Michael Keaton – Batman (1943)',
+      icon: 'https://media.giphy.com/media/oOK9AZGnf9b0c/giphy.gif',
+      alt: 'Michael Keawton as Batman'
+    },
+    {
+      question: 'In Batman Vs Superman, who won???',
+      answers: [
+        'BATMAN DUH!',
+        'Superman',
+        'It was a tie'
+      ],
+      correctAnswer: 'BATMAN DUH!',
+      icon: 'https://media.giphy.com/media/RYwMtNoSyP4Yw/giphy.gif',
+      alt: 'compass icon'
     }
-  });
-}
-
-//user feedback for correct answer
-function userAnswerFeedbackCorrect () {
-  let correctAnswer = `${STORE[questionNumber].correctAnswer}`;
-  $('.questionAnswerForm').html(`<div class="correctFeedback"><div class="icon"><p><b>CORRECT!</b></p><img src="${STORE[questionNumber].icon}" alt="${STORE[questionNumber].alt}"/></div><p><span>"${correctAnswer}"</span></p><button type=button class="nextButton">Next</button></div>`);
-}
-
-//user feedback for wrong answer
-function userAnswerFeedbackWrong () {
-  let correctAnswer = `${STORE[questionNumber].correctAnswer}`;
-  // let iconImage = `${STORE[questionNumber].icon}`;
-  $('.questionAnswerForm').html(`<div class="correctFeedback"><div class="icon"><p><b>WRONG!</b></p><img src="${STORE[questionNumber].icon}" alt="${STORE[questionNumber].alt}"/></div><p>The correct answer is <span>"${correctAnswer}"</span></p><button type=button class="nextButton">Next</button></div>`);
-}
-
-//when quiz is over this is the html for the page
-function renderResults () {
-  if (score >= 8) {
-    $('.questionAnswerForm').html(`<div class="correctFeedback"><h3>Phenomenal work! </h3><img src="https://media.giphy.com/media/3z4Wju1DmiRoI/giphy.gif" alt="Batman Eating"/><p>You got ${score} /10</p><p>May your friends and Mom proudly call you Batman!</p><button class="restartButton">Restart Quiz</button></div>`);
-  } else if (score < 8 && score >= 5) {
-    $('.questionAnswerForm').html(`<div class="correctFeedback"><h3>I dont know about Batman</h3><img src="https://media.giphy.com/media/MoBklgH66BKxi/giphy.gif" alt="Robin is Wowed"/><p>You got ${score} /10</p><p>But you sure would make a good Robin!</p><button class="restartButton">Restart Quiz</button></div>`);
-  } else {
-    $('.questionAnswerForm').html(`<div class=" correctFeedback"><h3>Yikes!</h3><img src="https://media.giphy.com/media/fHxgDPtfCpd5u/giphy.gif" alt="Batman shooting gun"/><p>You only got ${score} /10</p><p>I think you need help.</p><button class="restartButton">Restart Quiz</button></div>`);
-  }
-}
-
-//what happens when the user clicks next
-function renderNextQuestion () {
-  $('main').on('click', '.nextButton', (event)=>{
-    // reprents actuall value
-    questionNumber ++;
-    // represents text
-    $('.questionNumber').text(questionNumber+1);
-    generateQuestion();
-    userSelectAnswer();
-  });
-}
-
-//restart quiz function - reloads page to start quiz over
-function restartQuiz () {
-  $('main').on('click', '.restartButton', (event)=>{
-    location.reload();
-  });
-}
-
-//run quiz functions
-function createQuiz () {
-  startQuiz();
-  generateQuestion();
-  userSelectAnswer();
-  renderNextQuestion();
-}
-
-$(createQuiz);
+];
