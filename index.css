@@ -220,6 +220,12 @@ h3 {
     margin-top: 40px
 }
 
+/* height Size for laptops*/
+@media screen and (max-height: 900px) {
+.quizStart{
+margin-top:350px;
+}
+    
 /* Tablet Size */
 @media screen and (max-width: 1092px) {
   .questionAnswerForm,
