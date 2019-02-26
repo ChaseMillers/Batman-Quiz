@@ -225,7 +225,8 @@ h3 {
 .quizStart{
 margin-top:350px;
 }
-    
+}
+
 /* Tablet Size */
 @media screen and (max-width: 1092px) {
   .questionAnswerForm,
