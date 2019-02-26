@@ -1,0 +1,271 @@
+/* Title screen styling*/
+* {
+    box-sizing: border-box;
+}
+html, body {
+color:white;
+
+}
+html {
+  background: url(pics/coverHD.jpg) no-repeat center fixed; 
+  background-size: cover;
+}
+.quizStart{
+margin-top:500px;
+text-align:center;
+width:800px;
+}
+.startButton{
+margin-top:20px;
+border-radius: 6%;
+width:180px;
+height:60px;
+font-weight:bold;
+font-size:22px;
+background-color:yellow;
+border: none;
+}
+button:hover, button:focus {
+    background-color: #dbba4b;
+}
+
+h1{
+  font-weight:bold;
+  text-shadow: 1px 1.5px black;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+/* Holds score and question number */
+footer ul{
+  display: none;
+  padding-left:15px;
+  padding-right:15px;
+  list-style:none;
+  font-weight:bold;
+  font-size:22px;
+  text-shadow: 1px 1.5px black;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+footer{
+display:flex;
+justify-content:center;
+}
+
+/* sets to true after button */
+.questionAnswerForm {
+    display: none;
+    width: 50%;
+}
+
+/*Quiz start screen styling*/
+/* represents the NEXT button feature */
+.nextButton {
+    padding: 20px;
+    border: none;
+    background-color:yellow;
+    color:black;
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight:bold;
+    border-radius: 0;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 10px
+}
+.nextButton:hover, button:focus {
+    background-color: #363946;
+    color: #ebca52
+}
+
+main div {
+    margin: 0 auto;
+}
+label:nth-child(1) {
+    background-color: rgb(0, 0, 0)
+}
+label:nth-child(2) {
+    background-color: rgb(63, 63, 63)
+}
+label:nth-child(3) {
+    background-color: rgb(114, 114, 114)
+}
+label {
+    padding: 20px;
+    margin-bottom: 10px;
+    display: flex;
+    color: #ffffff;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease-out;
+    line-height: 22px;
+}
+label:hover, label:focus {
+    background-color: #AF6438
+}
+
+fieldset {
+    border: none;
+}
+/*webkit and moz allow animated colored dots*/
+input {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-radius: 50%;
+    width: 16px;
+    height: 16px;
+    border: 2px solid #ffffff;
+    transition: 0.2s all linear;
+    outline: none;
+    margin-right: 5px;
+    position: relative;
+    top: 2px;
+}
+input:checked {
+    border: 8px solid #ebca52;
+}
+input[type=radio] {
+    flex: 0 0 auto;
+    margin-right: 10px;
+}
+/* Reads the top question */
+h2 {
+    font-size:30px;
+    text-align: left;
+    margin-bottom: 40px;
+    padding:10px;
+    color: #ffffff;
+    background: rgba(0, 0, 0, 0.8);
+    text-shadow: 1px 1.5px black;
+}
+.submitButton {
+    padding: 20px;
+    border: none;
+    background-color: #ebca52;
+    color: #363946;
+    font-size: 18px;
+    text-transform: uppercase;
+    border-radius: 0;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+    width: 100%;
+    text-align: left;
+}
+
+/* holds questions form*/
+.questionAnswerForm {
+  margin-top:50px;
+    display: none;
+    width: 40%;
+}
+
+/* holds the GIFF!!!! .icon is what actually holds the pic */
+.correctFeedback {
+    display: block;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.8);
+}
+.correctFeedback button {
+    width: 100%
+}
+.correctFeedback p {
+    font-weight:bold;
+    text-transform: uppercase;
+    margin-left: 20px;
+    margin-right: 20px;
+    color:white;
+}
+/*color of correct feedback*/
+.correctFeedback span {
+    color: rgb(241, 193, 103);
+    font-size: 20px;
+}
+.correctFeedback img {
+    width: 445px;
+    height: auto;
+    background-color:yellow;
+    display: block;
+    border-radius: 8%;
+    margin: auto;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom:20px;
+}
+/*space above CORRECT or WRONG*/
+.icon, b{
+  font-size:30px;
+  padding-top:10px;
+  color:Yellow;
+}
+
+h3 {
+    color: rgb(255, 255, 255);
+    font-size: 40px;
+    margin-bottom: 20px;
+    padding-top:10px;
+}
+
+.restartButton {
+    padding: 20px;
+    border: none;
+    background-color:Yellow;
+    color: #000000;
+    font-weight:bold;
+    font-size: 18px;
+    text-transform: uppercase;
+    border-radius: 0;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 40px
+}
+
+/* Tablet Size */
+@media screen and (max-width: 1092px) {
+  .questionAnswerForm,
+  .quizStart {  
+    width: 80%;
+    }
+  .correctFeedback img{
+    width: 400px;
+    height: auto;
+}
+}
+/*Smartphone size*/
+@media screen and (max-width: 792px) {
+  .correctFeedback img {
+    width: 300px;
+    height: auto;
+    display: block;
+    border-radius: 8%;
+    padding: 10px;
+    margin-top:20px;
+    margin-bottom:20px;
+}
+    h1 {
+        font-size: 1.5em
+    }
+    header ul li {
+        padding: 10px;
+        font-size: 18px
+    }
+    h2 {
+        font-size: 18px
+    }
+    }
+    label {
+        font-size: 16px;
+        padding: 15px
+    }
+    .correctFeedback p {
+        font-size: 16px;
+        margin: 0 15px
+    }
+    .results p:first-of-type {
+        font-size: 18px
+    }
+    h3 {
+        font-size: 25px
+    }
+
+}
