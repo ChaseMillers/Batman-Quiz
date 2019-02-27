@@ -7,7 +7,7 @@ color:white;
 
 }
 html {
-  background: url(coverHD.jpg) no-repeat center fixed; 
+  background: url('pics/coverHD.jpg') no-repeat center fixed; 
   background-size: cover;
 }
 .quizStart{
@@ -219,14 +219,12 @@ h3 {
     transition: all 0.3s ease;
     margin-top: 40px
 }
-
 /* height Size for laptops*/
 @media screen and (max-height: 900px) {
 .quizStart{
 margin-top:350px;
 }
 }
-
 /* Tablet Size */
 @media screen and (max-width: 1092px) {
   .questionAnswerForm,
@@ -239,9 +237,9 @@ margin-top:350px;
 }
 }
 /*Smartphone size*/
-@media screen and (max-width: 792px) {
+@media screen and (max-width: 700px) {
   .correctFeedback img {
-    width: 300px;
+    width: 265px;
     height: auto;
     display: block;
     border-radius: 8%;
