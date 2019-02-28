@@ -9,7 +9,7 @@ color:white;
 
 }
 html {
-  background: url(pics/coverWeb.jpg) no-repeat center fixed; 
+  background: url(coverWeb.jpg) no-repeat center fixed; 
   background-size: cover;
 }
 .quizStart{
