@@ -1,13 +1,13 @@
-const STORE = [
-    {
-      question: 'The first person EVER to kiss Batman was??',
+const QUESTIONS = [
+  {
+      question: 'The first person EVER to kiss “lick” Batman was??',
       answers: [
         'The joker – Batman Returns (1992)',
         'Poison Ivy – Batman & Robin (1997)',
         'Cat Women – Batman Returns (1992)'
         ],
       correctAnswer: 'Cat Women – Batman Returns (1992)',
-      icon: 'https://media.giphy.com/media/ax1F4T3W04rba/giphy.gif',
+      giff: 'https://media.giphy.com/media/ax1F4T3W04rba/giphy.gif',
       alt: 'Cat Women gives Batman a kiss'
     },
     {
@@ -18,7 +18,7 @@ const STORE = [
         'He robs bad guy’s wallets before throwing them in prison'
         ],
         correctAnswer: 'He inherited the wealth from his family',
-        icon: 'https://media.giphy.com/media/IjaPn2AFONFg4/giphy.gif',
+        giff: 'https://media.giphy.com/media/IjaPn2AFONFg4/giphy.gif',
         alt: 'Batman pulls out credit card'
     },
     {
@@ -29,7 +29,7 @@ const STORE = [
         'The Lego Batman Movie (2017)'
         ],
         correctAnswer: 'Batman Returns (1992)',
-        icon: 'https://media.giphy.com/media/14kwRD61ir8wW4/giphy.gif',
+        giff: 'https://media.giphy.com/media/14kwRD61ir8wW4/giphy.gif',
         alt: 'Mr McDonald rocking out'
     },
     {
@@ -40,18 +40,18 @@ const STORE = [
         'Batman Vs Spider Man (2016)'
         ],
       correctAnswer: 'Batman: Forever (1995)',
-      icon: 'https://video-images.vice.com/_uncategorized/1497278763548-Batman_and_Robin_-_George_Clooney-1.jpeg?resize=320:*',
+      giff: 'https://video-images.vice.com/_uncategorized/1497278763548-Batman_and_Robin_-_George_Clooney-1.jpeg?resize=320:*',
       alt: 'Batman Nipple Suit'
     },
     {
-      question: 'This actor received numerous accolades for his performance as “The Joker” in Batman: Dark Knight. He overdosed just months before the release of the film??',
+      question: '6.	This actor received numerous accolades for his performance as “The Joker” in Batman: Dark Knight. He overdosed just months before the release of the film??',
       answers: [
         'Christian Bale',
         'Heath Ledger',
         'Paul McCartney'
         ],
       correctAnswer: 'Heath Ledger',
-      icon: 'https://media.giphy.com/media/ZQSvc4VYkOr8Q/giphy.gif',
+      giff: 'https://media.giphy.com/media/ZQSvc4VYkOr8Q/giphy.gif',
       alt: 'The Joker saying you complete me'
     },
     {
@@ -62,7 +62,7 @@ const STORE = [
         'Batman: Forever (1995)'
         ],
       correctAnswer: 'Batman: The Dark Knight (2008)',
-      icon: 'https://media.giphy.com/media/l41lUGT1Jpeta3qUw/giphy.gif',
+      giff: 'https://media.giphy.com/media/l41lUGT1Jpeta3qUw/giphy.gif',
       alt: 'Batman turning his torso'
     },
     {
@@ -73,7 +73,7 @@ const STORE = [
       'Kanye West'
       ],
       correctAnswer: 'Arnold Schwarzenegger',
-      icon: 'https://media.giphy.com/media/fhojy9soO6i5i/giphy.gif',
+      giff: 'https://media.giphy.com/media/fhojy9soO6i5i/giphy.gif',
       alt: 'stream icon'
     },
     {
@@ -84,8 +84,8 @@ const STORE = [
         'Batman Returns (2011)'
         ],
         correctAnswer: 'Batman & Robin (1997)',
-        icon: 'https://images-na.ssl-images-amazon.com/images/I/91PSaaS99tL._SX342_.jpg',
-        alt: 'The Joker flashing his money'
+        giff: 'https://images-na.ssl-images-amazon.com/images/I/91PSaaS99tL._SX342_.jpg',
+        alt: 'Movie DVD of Batman & Robin'
     },
     {
       question: 'The first person EVER to star as Batman in a movie was??',
@@ -95,7 +95,7 @@ const STORE = [
         'Ozzy Osbourne - Bat Sabeth (1992)'
         ],
       correctAnswer: 'Michael Keaton – Batman (1943)',
-      icon: 'https://media.giphy.com/media/oOK9AZGnf9b0c/giphy.gif',
+      giff: 'https://media.giphy.com/media/oOK9AZGnf9b0c/giphy.gif',
       alt: 'Michael Keawton as Batman'
     },
     {
@@ -106,7 +106,7 @@ const STORE = [
         'It was a tie'
       ],
       correctAnswer: 'BATMAN DUH!',
-      icon: 'https://media.giphy.com/media/RYwMtNoSyP4Yw/giphy.gif',
-      alt: 'compass icon'
+      giff: 'https://media.giphy.com/media/RYwMtNoSyP4Yw/giphy.gif',
+      alt: 'Batman helping superman'
     }
 ];
