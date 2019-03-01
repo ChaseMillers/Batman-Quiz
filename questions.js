@@ -44,7 +44,7 @@ const QUESTIONS = [
       alt: 'Batman Nipple Suit'
     },
     {
-      question: '6.	This actor received numerous accolades for his performance as “The Joker” in Batman: Dark Knight. He overdosed just months before the release of the film??',
+      question: 'This actor received numerous accolades for his performance as “The Joker” in Batman: Dark Knight. He overdosed just months before the release of the film??',
       answers: [
         'Christian Bale',
         'Heath Ledger',
