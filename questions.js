@@ -1,6 +1,6 @@
 const QUESTIONS = [
   {
-      question: 'The first person EVER to kiss “lick” Batman was??',
+      question: 'The first person EVER to kiss Batman was??',
       answers: [
         'The joker – Batman Returns (1992)',
         'Poison Ivy – Batman & Robin (1997)',
@@ -36,8 +36,8 @@ const QUESTIONS = [
       question: 'Nipples became a new feature to the Batman suit in which movie??',
       answers: [
         'Batman: Forever (1995)',
-        'Batman: Dark Knight (2008)',
-        'Batman Vs Spider Man (2016)'
+        'Batman: Returns (1992)',
+        'Batman: Gets Really Cold (2016)'
         ],
       correctAnswer: 'Batman: Forever (1995)',
       giff: 'https://video-images.vice.com/_uncategorized/1497278763548-Batman_and_Robin_-_George_Clooney-1.jpeg?resize=320:*',
@@ -99,7 +99,7 @@ const QUESTIONS = [
       alt: 'Michael Keawton as Batman'
     },
     {
-      question: 'In Batman Vs Superman, who won???',
+      question: 'In Batman Vs Superman, who "technically" won???',
       answers: [
         'BATMAN DUH!',
         'Superman',
