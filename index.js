@@ -18,26 +18,24 @@ function startQuiz (){
   });
 }
 
-//Go into object QUESTIONS, grab [array number] and sellect .question to display in h2
+//Goes into object QUESTIONS, grab [array number] and sellect .question to display in h2
 //value uses' infromation stored for that answer, the span holds the text 
+//QUESTIONS[questionNumber].answers.length is grabbing the number of answers for question
 function createQuestion(){
   if (questionNumber<QUESTIONS.length){
+    let newHTML = '';
+    for (let i = 0; i < QUESTIONS[questionNumber].answers.length; i ++){
+      newHTML += `<label class='answerOption'>
+                    <input type='radio' value='${QUESTIONS[questionNumber].answers[i]}' name='answer' required>
+                    <span>${QUESTIONS[questionNumber].answers[i]}</span>
+                  </label>`
+    }
+
     $('.questionForm').html(`<div class='question'>
     <h2>${QUESTIONS[questionNumber].question}</h2>
     <form>
     <fieldset>
-    <label class='answerOption'>
-    <input type='radio' value='${QUESTIONS[questionNumber].answers[0]}' name='answer' required>
-    <span>${QUESTIONS[questionNumber].answers[0]}</span>
-    </label>
-    <label class='answerOption'>
-    <input type='radio' value='${QUESTIONS[questionNumber].answers[1]}' name='answer' required>
-    <span>${QUESTIONS[questionNumber].answers[1]}</span>
-    </label>
-    <label class='answerOption'>
-    <input type='radio' value='${QUESTIONS[questionNumber].answers[2]}'' name='answer' required>
-    <span>${QUESTIONS[questionNumber].answers[2]}</span>
-    </label>
+    ${newHTML}
     <button type='submit' class='submitButton'>Submit</button>
     </fieldset>
     </form>
@@ -117,5 +115,8 @@ function resetPage(){
 function quizApp(){
 $(startQuiz);
 $(nextQuestion);
+$(createQuestion);
+$(selectAnswer);
 }
 $(quizApp);
+
