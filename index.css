@@ -2,18 +2,16 @@
 * {
     box-sizing: border-box;
 }
-
-
 html, body {
 color:white;
 
 }
 html {
-  background: url(coverWeb.jpg) no-repeat center fixed; 
+  background: url('coverHD.jpg') no-repeat center fixed; 
   background-size: cover;
 }
 .quizStart{
-margin-top:500px;
+margin-top:540px;
 text-align:center;
 width:800px;
 }
@@ -80,6 +78,7 @@ justify-content:center;
     background-color: #363946;
     color: #ebca52
 }
+
 main div {
     margin: 0 auto;
 }
@@ -100,14 +99,16 @@ label {
     text-transform: uppercase;
     cursor: pointer;
     transition: all 0.3s ease-out;
-    line-height: 22px
+    line-height: 22px;
 }
 label:hover, label:focus {
     background-color: #AF6438
 }
+
 fieldset {
     border: none;
 }
+/*webkit and moz allow animated colored dots*/
 input {
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -165,6 +166,7 @@ h2 {
     width: 100%
 }
 .correctFeedback p {
+    font-weight:bold;
     text-transform: uppercase;
     margin-left: 20px;
     margin-right: 20px;
@@ -213,7 +215,12 @@ h3 {
     transition: all 0.3s ease;
     margin-top: 40px
 }
-
+/* height Size for laptops*/
+@media screen and (max-height: 900px) {
+.quizStart{
+margin-top:350px;
+}
+}
 /* Tablet Size */
 @media screen and (max-width: 1092px) {
   .questionForm,
@@ -226,9 +233,9 @@ h3 {
 }
 }
 /*Smartphone size*/
-@media screen and (max-width: 792px) {
+@media screen and (max-width: 700px) {
   .correctFeedback img {
-    width: 300px;
+    width: 265px;
     height: auto;
     display: block;
     border-radius: 8%;
@@ -236,7 +243,6 @@ h3 {
     margin-top:20px;
     margin-bottom:20px;
 }
-
     h1 {
         font-size: 1.5em
     }
