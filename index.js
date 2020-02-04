@@ -88,11 +88,21 @@ function nextQuestion(){
 
 function results(){
 if (score >=8){
-   $('.questionForm').html(`<div class="correctFeedback"><h3>Phenomenal work! </h3><img src="https://media.giphy.com/media/3z4Wju1DmiRoI/giphy.gif" alt="Batman Eating"/><p>You got ${score} /10</p><p>May your friends and Mom proudly call you Batman!</p><button class="restartButton">Restart Quiz</button></div>`);
+  $('.questionForm').html(`<div class="correctFeedback"><h3>Phenomenal work! </h3>
+  <img src="https://media.giphy.com/media/3z4Wju1DmiRoI/giphy.gif" alt="Batman Eating"/>
+  <p>You got ${score} /10</p><p>May your friends and Mom proudly call you Batman!</p>
+  <button class="restartButton">Restart Quiz</button></div>`);
   } else if (score<8 && score>=5){
-  $('.questionForm').html(`<div class="correctFeedback"><h3>I dont know about Batman</h3><img src="https://media.giphy.com/media/MoBklgH66BKxi/giphy.gif" alt="Robin is Wowed"/><p>You got ${score} /10</p><p>But you sure would make a good Robin!</p><button class="restartButton">Restart Quiz</button></div>`);
+  $('.questionForm').html(`<div class="correctFeedback">
+  <h3>I dont know about Batman</h3>
+  <img src="https://i.imgur.com/N1qnHsO.png" alt="Robin is Wowed"/>
+  <p>You got ${score} /10</p><p>But you sure would make a good Robin!</p>
+  <button class="restartButton">Restart Quiz</button></div>`);
   } else {
-  $('.questionForm').html(`<div class=" correctFeedback"><h3>Yikes!</h3><img src="https://media.giphy.com/media/fHxgDPtfCpd5u/giphy.gif" alt="Batman shooting gun"/><p>You only got ${score} /10</p><p>I think you need help.</p><button class="restartButton">Restart Quiz</button></div>`);
+  $('.questionForm').html(`<div class=" correctFeedback"><h3>Yikes!</h3>
+  <img src="https://media.giphy.com/media/fHxgDPtfCpd5u/giphy.gif" alt="Batman shooting gun"/>
+  <p>You only got ${score} /10</p><p>I think you need help.</p>
+  <button class="restartButton">Restart Quiz</button></div>`);
   }
 }
 // Better then using location.reload();???
