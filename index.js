@@ -18,8 +18,6 @@ function startQuiz (){
   });
 }
 
-//Goes into object QUESTIONS, grab [array number] and sellect .question to display in h2
-//value uses' infromation stored for that answer, the span holds the text 
 //QUESTIONS[questionNumber].answers.length is grabbing the number of answers for question
 function createQuestion(){
   if (questionNumber<QUESTIONS.length){
