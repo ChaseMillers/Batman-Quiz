@@ -118,8 +118,6 @@ function resetPage(){
   });
 }
 
-// Better of worse to have functions activate at start of page or Manually chained by each other
-// Better to make add point and add question a function?
 function quizApp(){
 $(startQuiz);
 $(nextQuestion);
