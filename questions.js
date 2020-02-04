@@ -74,7 +74,7 @@ const QUESTIONS = [
       ],
       correctAnswer: 'Arnold Schwarzenegger',
       giff: 'https://media.giphy.com/media/fhojy9soO6i5i/giphy.gif',
-      alt: 'stream icon'
+      alt: 'Arnold Schwarzenegger'
     },
     {
       question: 'The least commercially successful and among the worst rated superhero films of all time is???',
@@ -96,7 +96,7 @@ const QUESTIONS = [
         ],
       correctAnswer: 'Michael Keaton – Batman (1943)',
       giff: 'https://media.giphy.com/media/oOK9AZGnf9b0c/giphy.gif',
-      alt: 'Michael Keawton as Batman'
+      alt: 'Michael Keaton as Batman'
     },
     {
       question: 'In Batman Vs Superman, who "technically" won???',
