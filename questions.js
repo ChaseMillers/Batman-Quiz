@@ -40,7 +40,7 @@ const QUESTIONS = [
         'Batman: Gets Really Cold (2016)'
         ],
       correctAnswer: 'Batman: Forever (1995)',
-      giff: 'https://video-images.vice.com/_uncategorized/1497278763548-Batman_and_Robin_-_George_Clooney-1.jpeg?resize=320:*',
+      giff: 'https://i.imgur.com/C2OyEFZ.jpg?resize=320:*',
       alt: 'Batman Nipple Suit'
     },
     {
@@ -84,7 +84,7 @@ const QUESTIONS = [
         'Batman Returns (2011)'
         ],
         correctAnswer: 'Batman & Robin (1997)',
-        giff: 'https://images-na.ssl-images-amazon.com/images/I/91PSaaS99tL._SX342_.jpg',
+        giff: 'https://i.imgur.com/dunwQsi.png',
         alt: 'Movie DVD of Batman & Robin'
     },
     {
