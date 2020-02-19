@@ -141,7 +141,7 @@ h2 {
     text-shadow: 1px 1.5px black;
 }
 .submitButton {
-    padding: 20px;
+    padding: 10px;
     border: none;
     background-color: #ebca52;
     color: #363946;
@@ -151,8 +151,6 @@ h2 {
     cursor: pointer;
     transition: all 0.3s ease;
     margin-top: 10px;
-    width: 100%;
-    text-align: left;
 }
 
 
